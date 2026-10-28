@@ -15,5 +15,24 @@
 <section id="history" class="card tab" hidden><h2>Play history</h2><div class="grid"><label>Search game, player, deck, or notes<input id="filter" placeholder="Filter saved plays"></label><label>Game type<select id="typeFilter"><option value="">All</option><option value="board">Board games</option><option value="mtg">MTG</option></select></label><label>Mode<select id="modeFilter"><option value="">All</option><option value="solo">Solo</option><option value="cooperative">Cooperative</option><option value="competitive">Competitive</option></select></label></div><p class="muted">These filters also apply to Statistics.</p><div id="historyList"></div></section>
 <section id="stats" class="tab" hidden><div id="summary" class="metrics"></div><div class="card"><h2>Plays by month</h2><div id="monthly"></div></div><div class="card"><h2>Most-played games</h2><div id="gameChart"></div></div><div class="card"><h2>Player results</h2><p class="muted">Appearances count logged sessions, not individual MTG games within a match. Solo and cooperative wins count for every participant when the group wins. Unrecorded outcomes remain in the appearance denominator.</p><div class="tableWrap"><table><thead><tr><th>Player</th><th>Plays</th><th>Wins</th><th>Draws</th><th>Win / play</th></tr></thead><tbody id="leaderboard"></tbody></table></div></div><div class="card"><h2>Score history</h2><label>Game<select id="scoreGame"></select></label><p class="muted">Each point is one player's recorded score, ordered by play date; scores from different games are not mixed.</p><div id="scoreChart"></div></div></section>
 <section id="backup" class="card tab" hidden><h2>Backup & portability</h2><p>Export JSON for a complete backup. CSV is one row per player per session. Keep backups even when using cloud storage.</p><div class="actions"><button id="exportJson">Export JSON</button><button id="exportCsv" class="secondary">Export CSV</button></div><label>Import JSON backup<input id="importFile" type="file" accept=".json,application/json"></label><p class="muted">Import merges by session ID. Existing IDs are skipped, not overwritten. Import is not a live sync feature. In cloud mode, sign in first.</p></section>
-<footer>One record = one play session. For MTG, choose either one game or one match and use that convention consistently. <p> This little project was built using Perplexity AI for the simple purpose of using it as a small journal for the author's board game plays.</footer></main>
+<footer class="site-footer">
+  <p>
+    One record = one play session. For MTG, choose either one game
+    or one match and use that convention consistently.
+  <p> This little project was built using Perplexity AI for the simple purpose of using it as a small journal for the author's board game plays.
+  </p>
+
+  <a
+    class="bgg-credit"
+    href="https://boardgamegeek.com/"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Powered by BoardGameGeek — visit BoardGameGeek"
+  >
+    <img
+      src="powered-by-bgg.png"
+      alt="Powered by BGG"
+    >
+  </a>
+</footer>
 <script src="config.js"></script><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="app.js"></script></body></html>
